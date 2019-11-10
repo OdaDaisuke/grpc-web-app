@@ -18,7 +18,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	app := &application.Server{}
+	app := &application.MainApplication{}
 	pb.RegisterMessageServiceServer(grpcSvr, app)
 	grpcSvr.Serve(lis)
 }
